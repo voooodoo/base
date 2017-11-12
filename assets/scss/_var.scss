@@ -1,0 +1,27 @@
+/*============colors===============*/
+
+$bg-gray:#f2f5f8;
+$color-placeholder:#c6ccd2;
+$btn-blue:#65abd0;
+$btn-darkblue:#3385ff;
+$btn-green:#24aa98;
+$btn-red:#db7560;
+$btn-yellow: #d9c26c;
+$hover-blue:#3385ff;
+$hover-gray:#737373;
+
+
+/*==============mixins==============*/
+
+@mixin middle() {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder           { @content; }
+    &::-moz-placeholder          { @content; }
+    &:-ms-input-placeholder      { @content; }  
+  }
