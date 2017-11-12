@@ -50,10 +50,13 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-lock:before { content: '\e800'; } /* '' */
-.icon-down-open:before { content: '\f004'; } /* '' */
-.icon-right-open:before { content: '\f006'; } /* '' */
-.icon-left-open:before { content: '\f007'; } /* '' */
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-facebook:before { content: '\f09a'; } /* '' */
-.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-align-left:before { content: '\e800'; } /* '' */
+.icon-align-center:before { content: '\e801'; } /* '' */
+.icon-align-right:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+.icon-cancel-circled:before { content: '\e804'; } /* '' */
+.icon-ok:before { content: '\e805'; } /* '' */
+.icon-cancel:before { content: '\e806'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-angle-left:before { content: '\f104'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */

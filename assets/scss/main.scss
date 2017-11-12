@@ -3,3 +3,138 @@
 @import 'fontello';
 @import 'icons';
 @import 'var';
+
+
+/*==============commom classes============*/
+html {
+    font-family: 'Cabin', sans-serif; 
+}
+
+.section {
+    max-width: 940px;
+    margin: 10px auto; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*=============btn=============*/
+.btn {
+    font-size: rem(16px);
+    background: $blue;
+    color:#fff;
+    width: rem(140px);
+    height: rem(48px);
+    border:none;
+    transition: opacity .3;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+    
+    &-lg {
+        font-size: rem(18px);
+        width: rem(190px);
+        height: rem(60px);
+    }
+    
+    &-sm {
+        font-size: rem(14px);
+        width: rem(120px);
+        height: rem(36px);;
+    }
+
+    &-br {
+        border-radius:5px;
+    }
+    
+    &-round {
+        border-radius:15%/50%;
+    }
+    
+    &-outline {
+        border:2px solid $blue;
+        background: transparent;
+        color:$blue;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity:0.8;
+        }
+    }
+    
+    &-circle {
+        width: rem(48px);
+        border-radius: 50%;
+        font-size: rem(20px);
+
+        &-sm {
+            width: rem(36px);
+            height: rem(36px);
+            border-radius: 50%;
+        }
+
+        &-lg {
+            width:rem(60px);
+            height: rem(60px);
+            border-radius: 50%;
+            font-size: rem(24px);
+        }
+    }
+    &-icon {
+        width: rem(48px);
+
+        &-sm {
+            width: rem(36px);
+        }
+    }
+
+    &-right {
+        position:relative;
+        margin-right: rem(30px);
+        width: rem(76px);
+
+        &:before {
+            content:"";
+            position:absolute;
+            top:0;
+            right:-22px;
+            width:26px;
+            height: 48px;
+            background-image: url('../../assets/img/icons/btn-right.jpg');
+        }
+        &-sm {
+            position:relative;
+            margin-right: rem(24px);
+            width: rem(90px);
+
+            &:before {
+                content:"";
+                position:absolute;
+                top:0;
+                right:-16px;
+                width:20px;
+                height: 36px;
+                background-image: url('../../assets/img/icons/btn-right-sm.jpg');
+            }
+        }
+    }
+    &-icon {
+        &-left {
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+        }
+        &-right {
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+        }
+    }
+}
+.two-btn {
+    background: linear-gradient(to right, #ffffff 15%,#609fc0 15%,#609fc0 75%,#ffffff 75%,#ffffff 76%,#ffffff 76%,#ffffff 76%,#ffffff 76%);
+}
