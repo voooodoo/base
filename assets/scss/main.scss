@@ -12,7 +12,7 @@ html {
 
 .section {
     max-width: 940px;
-    margin: 10px auto; 
+    margin: 30px auto; 
 }
 
 .row {
@@ -128,13 +128,114 @@ html {
         &-left {
             border-top-left-radius:5px;
             border-bottom-left-radius:5px;
+            border-right: 1px solid $blue-border;
         }
         &-right {
             border-top-right-radius:5px;
             border-bottom-right-radius:5px;
+            border-left: 1px solid $blue-border;
         }
     }
 }
 .two-btn {
-    background: linear-gradient(to right, #ffffff 15%,#609fc0 15%,#609fc0 75%,#ffffff 75%,#ffffff 76%,#ffffff 76%,#ffffff 76%,#ffffff 76%);
+   font-size: 0;
 }
+
+/*==============input-text=============*/
+
+.btn-menu {
+    font-size: 0;
+
+    &__btn {
+        width: rem(48px);
+        background: $green;
+    }
+    &__left {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid $green-border;
+    }
+    &__center {
+        border-right: 1px solid $green-border;
+        border-left: 1px solid $green-border;
+    }
+    &__right {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-left: 1px solid $green-border;
+    }
+}
+
+.btn-send {
+    font-size: 0;
+    
+    &__text-left {
+        font-size: rem(16px);
+        height: rem(48px);
+        box-sizing: border-box;
+        width: 220px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 2px solid #c6ccd2;
+        border-right:transparent;
+        padding: 0 rem(16px);
+        @include placeholder() {
+            color: $gray-text;
+        }
+    }
+    &__btn-right {
+        font-size: rem(16px);
+        width: 76px;
+        height: rem(48px);
+        border:none;
+        background: $green;
+        color:#fff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.btn-seller {
+    font-size: 0;
+
+    &__left {
+        font-size: rem(16px);
+        width: 112px;
+        height: rem(48px);
+        border:none;
+        background: $green;
+        color:#fff;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    &__text {
+        font-size: rem(16px);
+        height: rem(48px);
+        box-sizing: border-box;
+        width: 192px;
+        border: 2px solid #c6ccd2;
+        border-right:transparent;
+        border-left:transparent;
+        padding: 0 rem(16px);
+        @include placeholder() {
+            color: $gray-text;
+        }
+    }
+    &__right {
+        font-size: rem(16px);
+        width: 76px;
+        height: rem(48px);
+        border:none;
+        background: $green;
+        color:#fff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.btn-ok {
+    height: rem(48px);
+    width: 60px;
+    padding: 0 rem(8px);
+    background: $green;
+}
+
+/*================section-inp-email-search==================*/

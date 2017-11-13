@@ -2,6 +2,13 @@
 
 $blue:#65abd0;
 $blue-hover:#5093b7;
+$blue-border:#609fc0;
+
+$green:#24aa98;
+$green-border:#269e8e;
+
+$gray-text:#b4bbc2;
+$gray-border:#c6ccd2;
 
 /*==============mixins==============*/
 
@@ -16,4 +23,4 @@ $blue-hover:#5093b7;
     &:-moz-placeholder           { @content; }
     &::-moz-placeholder          { @content; }
     &:-ms-input-placeholder      { @content; }  
-  }
+}
