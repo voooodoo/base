@@ -239,3 +239,35 @@ html {
 }
 
 /*================section-inp-email-search==================*/
+
+.container {
+    width:50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__email {
+        padding-right: 15px;
+    }
+    &__search {
+        padding-left: 15px;
+    }
+}
+[type="email"] {
+    width: 220px;
+    box-sizing: border-box;
+    height:rem(48px);
+    border: 2px solid $gray-border;
+    border-radius: 5px;
+    padding: 0 rem(10px);
+    margin-bottom: 20px;
+
+    &:focus {
+        outline: none;
+        border-color:$blue;
+    }
+}
+.inp-error {
+    border-color:$red;
+}

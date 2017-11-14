@@ -670,5 +670,30 @@ html {
   background: #24aa98; }
 
 /*================section-inp-email-search==================*/
+.container {
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .container__email {
+    padding-right: 15px; }
+  .container__search {
+    padding-left: 15px; }
+
+[type="email"] {
+  width: 220px;
+  box-sizing: border-box;
+  height: 3rem;
+  border: 2px solid #c6ccd2;
+  border-radius: 5px;
+  padding: 0 0.625rem;
+  margin-bottom: 20px; }
+  [type="email"]:focus {
+    outline: none;
+    border-color: #65abd0; }
+
+.inp-error {
+  border-color: #db7560; }
 
 /*# sourceMappingURL=main.css.map */
