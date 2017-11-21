@@ -1,0 +1,221 @@
+/*=============btn=============*/
+.btn {
+    font-size:16px;
+    background: $blue;
+    color:#fff;
+    width: 140px;
+    height: 48px;
+    border:none;
+    transition: opacity .3;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &--default {
+        background-color: $gray-border;
+    }
+    &--success {
+        background-color: $green-border;
+    }
+
+    &-lg {
+        font-size: 18px;
+        width: 190px;
+        height: 60px;
+    }
+    
+    &-sm {
+        font-size: 14px;
+        width: 120px;
+        height: 36px;
+    }
+
+    &-br {
+        border-radius:5px;
+    }
+    
+    &-round {
+        border-radius:15%/50%;
+    }
+    
+    &-outline {
+        border:2px solid $blue;
+        background: transparent;
+        color:$blue;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity:0.8;
+        }
+    }
+    
+    &-circle {
+        width: 48px;
+        border-radius: 50%;
+        font-size: 20px;
+
+        &-sm {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        &-lg {
+            width:60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+    }
+    &-icon {
+        width: 48px;
+
+        &-sm {
+            width: 36px;
+        }
+    }
+
+    &-right {
+        position:relative;
+        margin-right: 30px;
+        width: 76px;
+
+        &:before {
+            content:"";
+            position:absolute;
+            top:0;
+            right:-22px;
+            width:26px;
+            height: 48px;
+            background-image: url('../../assets/img/icons/btn-right.jpg');
+        }
+        &-sm {
+            position:relative;
+            margin-right:24px;
+            width: 90px;
+
+            &:before {
+                content:"";
+                position:absolute;
+                top:0;
+                right:-16px;
+                width:20px;
+                height: 36px;
+                background-image: url('../../assets/img/icons/btn-right-sm.jpg');
+            }
+        }
+    }
+    &-icon {
+        &-left {
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+            border-right: 1px solid $blue-border;
+        }
+        &-right {
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+            border-left: 1px solid $blue-border;
+        }
+    }
+}
+.two-btn {
+   font-size: 0;
+}
+
+/*==============input-text=============*/
+
+.btn-menu {
+    font-size: 0;
+
+    &__btn {
+        width: 48px;
+        background: $green;
+    }
+    &__left {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid $green-border;
+    }
+    &__center {
+        border-right: 1px solid $green-border;
+        border-left: 1px solid $green-border;
+    }
+    &__right {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-left: 1px solid $green-border;
+    }
+}
+
+.btn-send {
+    font-size: 0;
+    
+    &__text-left {
+        font-size: 16px;
+        height: 48px;
+        box-sizing: border-box;
+        width: 220px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 2px solid #c6ccd2;
+        border-right:transparent;
+        padding: 0 16px;
+        @include placeholder() {
+            color: $gray-text;
+        }
+    }
+    &__btn-right {
+        font-size: 16px;
+        width: 76px;
+        height: 48px;
+        border:none;
+        background: $green;
+        color:#fff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.btn-seller {
+    font-size: 0;
+
+    &__left {
+        font-size: 16px;
+        width: 112px;
+        height: 48px;
+        border:none;
+        background: $green;
+        color:#fff;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    &__text {
+        font-size: 16px;
+        height: 48px;
+        box-sizing: border-box;
+        width: 192px;
+        border: 2px solid #c6ccd2;
+        border-right:transparent;
+        border-left:transparent;
+        padding: 0 16px;
+        @include placeholder() {
+            color: $gray-text;
+        }
+    }
+    &__right {
+        font-size: 16px;
+        width: 76px;
+        height: 48px;
+        border:none;
+        background: $green;
+        color:#fff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+.btn-ok {
+    height:48px;
+    width: 60px;
+    padding: 0 8px;
+    background: $green;
+}

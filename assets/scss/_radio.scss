@@ -1,0 +1,38 @@
+.radio-group {
+    margin-bottom: 24px;
+}
+
+.radio + label {
+  cursor: pointer;
+}
+.radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.radio:not(checked) + label {
+  position: relative;
+  padding-left: 35px;
+}
+.radio:not(checked) + label:before {
+  content: '';
+  @include centered(y);
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color:$gray-border;
+  border-radius: 50%;
+}
+.radio:not(checked) + label:after {
+  content: '';
+  @include centered(y);
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $blue;
+  opacity: 0;
+  transition: all .2s;
+}
+.radio:checked + label:after {
+  opacity: 1;
+}

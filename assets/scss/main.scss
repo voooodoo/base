@@ -1,15 +1,19 @@
 @import 'normalize';
-@import 'rem';
 @import 'fontello';
-@import 'icons';
+
 @import 'var';
+@import 'icons';
+@import 'btn';
+@import 'radio';
 
 
 /*==============commom classes============*/
 html {
     font-family: 'Cabin', sans-serif; 
 }
-
+* {
+    box-sizing: border-box;
+}
 .section {
     max-width: 940px;
     margin: 30px auto; 
@@ -23,221 +27,6 @@ html {
     margin-bottom: 10px;
 }
 
-/*=============btn=============*/
-.btn {
-    font-size: rem(16px);
-    background: $blue;
-    color:#fff;
-    width: rem(140px);
-    height: rem(48px);
-    border:none;
-    transition: opacity .3;
-    
-    &:hover {
-        opacity: 0.8;
-    }
-    
-    &-lg {
-        font-size: rem(18px);
-        width: rem(190px);
-        height: rem(60px);
-    }
-    
-    &-sm {
-        font-size: rem(14px);
-        width: rem(120px);
-        height: rem(36px);;
-    }
-
-    &-br {
-        border-radius:5px;
-    }
-    
-    &-round {
-        border-radius:15%/50%;
-    }
-    
-    &-outline {
-        border:2px solid $blue;
-        background: transparent;
-        color:$blue;
-        transition: opacity .3s;
-
-        &:hover {
-            opacity:0.8;
-        }
-    }
-    
-    &-circle {
-        width: rem(48px);
-        border-radius: 50%;
-        font-size: rem(20px);
-
-        &-sm {
-            width: rem(36px);
-            height: rem(36px);
-            border-radius: 50%;
-        }
-
-        &-lg {
-            width:rem(60px);
-            height: rem(60px);
-            border-radius: 50%;
-            font-size: rem(24px);
-        }
-    }
-    &-icon {
-        width: rem(48px);
-
-        &-sm {
-            width: rem(36px);
-        }
-    }
-
-    &-right {
-        position:relative;
-        margin-right: rem(30px);
-        width: rem(76px);
-
-        &:before {
-            content:"";
-            position:absolute;
-            top:0;
-            right:-22px;
-            width:26px;
-            height: 48px;
-            background-image: url('../../assets/img/icons/btn-right.jpg');
-        }
-        &-sm {
-            position:relative;
-            margin-right: rem(24px);
-            width: rem(90px);
-
-            &:before {
-                content:"";
-                position:absolute;
-                top:0;
-                right:-16px;
-                width:20px;
-                height: 36px;
-                background-image: url('../../assets/img/icons/btn-right-sm.jpg');
-            }
-        }
-    }
-    &-icon {
-        &-left {
-            border-top-left-radius:5px;
-            border-bottom-left-radius:5px;
-            border-right: 1px solid $blue-border;
-        }
-        &-right {
-            border-top-right-radius:5px;
-            border-bottom-right-radius:5px;
-            border-left: 1px solid $blue-border;
-        }
-    }
-}
-.two-btn {
-   font-size: 0;
-}
-
-/*==============input-text=============*/
-
-.btn-menu {
-    font-size: 0;
-
-    &__btn {
-        width: rem(48px);
-        background: $green;
-    }
-    &__left {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-right: 1px solid $green-border;
-    }
-    &__center {
-        border-right: 1px solid $green-border;
-        border-left: 1px solid $green-border;
-    }
-    &__right {
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-left: 1px solid $green-border;
-    }
-}
-
-.btn-send {
-    font-size: 0;
-    
-    &__text-left {
-        font-size: rem(16px);
-        height: rem(48px);
-        box-sizing: border-box;
-        width: 220px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border: 2px solid #c6ccd2;
-        border-right:transparent;
-        padding: 0 rem(16px);
-        @include placeholder() {
-            color: $gray-text;
-        }
-    }
-    &__btn-right {
-        font-size: rem(16px);
-        width: 76px;
-        height: rem(48px);
-        border:none;
-        background: $green;
-        color:#fff;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-}
-.btn-seller {
-    font-size: 0;
-
-    &__left {
-        font-size: rem(16px);
-        width: 112px;
-        height: rem(48px);
-        border:none;
-        background: $green;
-        color:#fff;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-    &__text {
-        font-size: rem(16px);
-        height: rem(48px);
-        box-sizing: border-box;
-        width: 192px;
-        border: 2px solid #c6ccd2;
-        border-right:transparent;
-        border-left:transparent;
-        padding: 0 rem(16px);
-        @include placeholder() {
-            color: $gray-text;
-        }
-    }
-    &__right {
-        font-size: rem(16px);
-        width: 76px;
-        height: rem(48px);
-        border:none;
-        background: $green;
-        color:#fff;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-}
-.btn-ok {
-    height: rem(48px);
-    width: 60px;
-    padding: 0 rem(8px);
-    background: $green;
-}
-
 /*================section-inp-email-search==================*/
 
 .container {
@@ -246,28 +35,196 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 
-    &__email {
+    &__left {
         padding-right: 15px;
     }
-    &__search {
+    &__right {
         padding-left: 15px;
     }
 }
-[type="email"] {
-    width: 220px;
+
+.form-group {
+    width: 220px;   
+    margin-top: 20px;
+
+    &--multiply {
+        display: flex;
+    }
+    &--multiply-between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--error {
+    position: relative;
+
+        input {
+            border-color:$red;
+        }
+
+        &:after {
+            @include centered(y);
+            font-family: 'fontello';
+            font-size: 16px;
+            color:$red;
+            content: '\e806';
+            width: 16px;
+            height: 16px;
+            right:10px;
+        }
+    }
+    &--success {
+        position: relative;
+
+        input {
+            border-color:$green-border;
+        }
+
+        &:after {
+            @include centered(y);
+            font-family: 'fontello';
+            font-size: 16px;
+            color:$green-border;
+            content: '\e805';
+            width: 16px;
+            height: 16px;
+            right:10px;
+        }
+    }
+    &--search {
+        position: relative;
+
+        input[type="search"] {
+            padding-left: 36px;
+            padding-right: 36px;
+        }
+
+    }
+    
+}
+.inp-email {
+    width:100%;
+    font-size: 16px;
     box-sizing: border-box;
-    height:rem(48px);
     border: 2px solid $gray-border;
     border-radius: 5px;
-    padding: 0 rem(10px);
-    margin-bottom: 20px;
-
+    padding: 12px 15px;
+    
+    @include placeholder {
+        color: $gray-text;
+    }
+    
     &:focus {
         outline: none;
         border-color:$blue;
     }
+    &--sm {
+        font-size: 14px;
+        padding:7px 10px;
+    }
 }
-.inp-error {
-    border-color:$red;
+.inp-search {
+    width:100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 2px solid $gray-border;
+    padding: 12px 15px;
+    border-radius:25px/50%;
+
+    &--sm {
+        font-size: 14px;
+        padding:7px 10px;
+        border-radius:20px/50%;
+    }
+
+    &__btn {
+        border-radius: 5px;
+    
+        &--right {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        &--sm {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    &--left {
+        border-radius:0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 170px;
+    }
+    &--center {
+        border-radius:5px;
+        width: 160px;
+    }
+
+    @include placeholder {
+        color: $gray-text;
+    }
+    
+    &:focus {
+        outline: none;
+        border-color:$blue;  
+    }
+    &:focus + .icon-search-pos {
+        opacity: 1;
+    }
+    &:focus + .icon-search-pos + .icon-cancel-circled-pos {
+        opacity: 1;
+    }
+    
+}
+.textarea {
+    width:100%;
+    font-size: 16px;
+    border: 2px solid $gray-border;
+    border-radius: 5px;
+    padding: 12px 15px;
+    height: 138px;
+    
+    @include placeholder {
+        color: $gray-text;
+    }
+    &:focus {
+        outline: none;
+        border-color:$blue;  
+    }
+}
+.select {
+    width:100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 12px 15px;
+    appearance: none;
+    background-color: $green-border;
+    color:#fff;
+
+    &:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
+   
+}
+
+.select-group {
+    position: relative;
+    
+    &:before {
+    content:'\f107';
+    font-family: 'fontello';
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    @include centered(y);
+    color:#fff;
+    z-index: 100;
+    right: 12px;
+    }
+    
 }

@@ -1,17 +1,22 @@
-.icon-input-inner {
-    position: absolute;
-    top:25px;
-    font-size: 18px;
-    left:12px;
-    opacity: 0.2;
+.icon-search-pos {
+    @include centered(y);
+    left: 12px;
+    opacity: .3;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color:$black;
     pointer-events: none;
+
+    &--sm {
+        font-size: 14px;
+    }
 }
-.icon-password {
-    font-size: 22px;
-    top:22px;
-}
-.social-icon {
-    position:absolute;
-    left:10px;
-    top:10px;
+.icon-cancel-circled-pos {
+    @include centered(y);
+    right: 12px;
+    font-size: 16px;
+    opacity: 0;
+    color:$black;
+    cursor: pointer;    
 }

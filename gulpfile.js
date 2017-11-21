@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
     postcss      = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer'),
     browser = require('browser-sync').create(),
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
@@ -10,6 +11,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     inject = require('gulp-inject'),
     iconfont = require("gulp-iconfont"),
+    cssunit = require('gulp-css-unit'),
     consolidate = require("gulp-consolidate");
 
 var svgWatch = './assets/src/*.svg';
@@ -22,6 +24,14 @@ gulp.task('sass', function () {
         .pipe(sass({
             output_style: 'compressed'
         }).on('error', sass.logError))
+        .pipe(cssunit({
+            type: 'px-to-rem',
+            rootSize: 16
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist/css'))
         .pipe(browser.stream({match: '**/*.css'}));
