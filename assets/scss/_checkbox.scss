@@ -1,0 +1,155 @@
+.checkbox-group {
+    margin-bottom: 24px;
+}
+
+.checkbox-column {
+    width: 100px;
+}
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+.checkbox + label {
+  cursor: pointer;
+}
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; 
+  padding: 0 0 0 35px; 
+}
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width:16px;
+  height: 16px;
+  border-radius: 5px;
+  background: $gray-border;
+}
+.checkbox:not(checked) + label:after {
+  font-family: 'fontello';
+  font-size:8px;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: center;
+  color:#fff;
+  content: '\e805';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background: $green-border;
+  opacity: 0;
+  transition: all .2s; 
+}
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+  opacity: 1;
+}
+
+
+.checkbox-btn {
+    opacity: 0;
+    height: 30px;
+}
+.checkbox-btn + label {
+    position: relative;
+    cursor: pointer;
+    
+    
+
+    &:before {
+        content:"On Off";
+        font-size: 16px;
+        color:$gray-text;
+        box-sizing: border-box;
+        line-height: 32px;
+        word-spacing: 6px;
+        padding:0 5px 0 8px;
+        left:-10px;
+        transition: all .2s;
+
+        @include centered(y);  
+        width: 72px;
+        height: 35px;
+        background: #fff;
+        border: 2px solid $gray-border;
+        border-radius:100px;  
+    }
+    &:after {
+        @include centered(y);  
+        content:"";
+        width: 27px;
+        height: 27px;
+        background: $gray-border;
+        border-radius: 50%;
+        left:-5px;
+        transition: all .2s;
+    }    
+}
+.checkbox-btn:checked + label {
+    &:after {
+        left:30px;
+        background:$green-border;
+    }
+    &:before {
+        border-color:$green-border;
+        color:$green;
+    }
+}
+
+/*=================checkbox-btn--fill================*/
+.checkbox-btn--fill {
+    opacity: 0;
+    height: 30px;
+}
+.checkbox-btn--fill + label {
+    position: relative;
+    cursor: pointer;
+    
+
+    &:before {
+        content:"On Off";
+        font-size: 16px;
+        color:#fff;
+        box-sizing: border-box;
+        line-height: 34px;
+        word-spacing: 8px;
+        padding:0 4px 0 8px;
+        left:-10px;
+        background: $gray-border;
+        transition: all .2s;
+
+        @include centered(y);  
+        width: 72px;
+        height: 35px;
+        border-radius:100px;  
+    }
+    &:after {
+        @include centered(y);  
+        content:"";
+        width: 27px;
+        height: 27px;
+        background: #fff;
+        border-radius: 50%;
+        left:-5px;
+        transition: all .2s;
+    }    
+}
+.checkbox-btn--fill:checked + label {
+    &:after {
+        left:30px;
+    }
+    &:before {
+        background: $green-border;
+    }
+}

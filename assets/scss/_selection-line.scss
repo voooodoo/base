@@ -1,0 +1,78 @@
+.selection-line {
+    position: relative;
+    margin-bottom:24px;
+
+    &__box {
+        width:300px;
+        padding-top:24px;
+    }
+
+    &__line {
+        @include centered(y);
+        width: 100%;
+        height: 4px;
+        left: 0;
+        background: $gray-border;
+        border-radius:1000px;
+
+        &:after {
+            content:'';
+            position: absolute;
+            height: 4px;
+            left:20%;
+            right: 20%;
+            background: $yellow;
+            z-index: 100;
+        }
+    }
+    &__indicator {
+        @include centered(y);
+        width: 16px;
+        height: 16px;
+        background-color: $yellow;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #fff;
+
+        &--left {
+            left:20%;
+        }
+        &--right {
+            right:20%;
+        }
+    }
+}
+.selection-line-blue {
+    position: relative;
+    margin-bottom:24px;
+    
+    &__line {
+        @include centered(y);
+        width: 100%;
+        height: 4px;
+        left: 0;
+        background: $gray-border;
+        border-radius:1000px;
+
+        &:after {
+            content:'';
+            position: absolute;
+            height: 4px;
+            left:0;
+            right: 80%;
+            background: $blue;
+            z-index: 100;
+            border-radius:1000px;
+        }
+    }
+    &__indicator {
+        @include centered(y);
+        width: 16px;
+        height: 16px;
+        background-color: $blue;
+        border-radius: 50%;
+        cursor: pointer;
+        left: 20%;
+        border: 2px solid #fff;
+    }
+}

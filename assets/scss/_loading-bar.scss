@@ -1,0 +1,25 @@
+.loading-bar {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 18px;
+
+    &__line {
+        height: 36px;
+        background: $gray-border;
+        border-radius: 1000px;
+        
+    }
+    &__scale {
+        @include centered(y);
+        height: 30px;
+        width: 64%;
+        left:4px;
+        background: $green-border;
+        border-radius: 1000px;
+    }
+    &__indicator {
+        @include centered;
+        z-index: 110;
+        color:#fff;
+    }
+}

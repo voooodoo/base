@@ -1,0 +1,66 @@
+.slider-indicator {
+
+
+    @include centered(y);
+    height: 36px;
+    width: 36px;
+    border: 2px solid $gray-border;
+    border-radius: 50%; 
+    line-height: 32px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    
+
+    &--active {
+        background: $green-border;
+        border-color:transparent;
+        color:#fff;
+    }
+    &--active-blue {
+        background: $blue;
+        border-color:transparent;
+        color:#fff;
+    }
+    &--1 {
+        left:0;
+    }
+    &--2 {
+        @include centered;
+    }
+    &--3 {
+        right: 0;
+    }
+
+    &__block {
+        height: 36px;
+        position: relative;
+        width: 100%;
+        margin-bottom:24px;
+
+    }
+    &__line {
+        @include centered(y);
+        width: 100%;
+        height: 2px;
+        background: $gray-border;
+        left:0;
+
+        &:before {
+            content:'';
+            @include centered(y);
+            left:0;
+            right:70%;
+            height: 4px;
+            background: $green-border;
+            border-radius:100px;;
+        }
+    }
+    &__line-blue {
+        @include centered(y);
+        width: 100%;
+        height: 2px;
+        background: $gray-border;
+        left:0;
+    }
+}

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Base</title>
-    <link rel="stylesheet" href="dist/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
     <section class="section section-btn">
@@ -180,18 +180,104 @@
                             <label for="radio1">Radiobutton Off</label>
                         </div>
                         <div class="radio-group">
-                            <input type="radio"  name="radio" class="radio" id="radio2">
+                            <input type="radio"  name="radio" class="radio" id="radio2" checked>
                             <label for="radio2">Radiobutton On</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" name="radio" class="radio" id="radio3" disabled>
+                            <label for="radio3">Radiobutton Disabled</label>
+                        </div>
                         </form>
                     </div>
+                    <form action="/" method="post">
+                        <div class="checkbox-group">
+                            <input type="checkbox" class="checkbox" id="checkbox-1">
+                            <label for="checkbox-1">Checkbox Off</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" class="checkbox" id="checkbox-2" checked>
+                            <label for="checkbox-2">Checkbox On</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" class="checkbox" id="checkbox-3" disabled>
+                            <label for="checkbox-3">Checkbox Disabled</label>
+                        </div>
+                    </form>
+                    </div>
+                    </div>
+
+
+            <div class="container container__right">
+                <div class="form-group form-group--full container__right">
+                    <div class="selection-line">
+                        <div class="selection-line__line"></div>
+                        <div class="selection-line__indicator selection-line__indicator--left"></div>
+                        <div class="selection-line__indicator selection-line__indicator--right"></div>
+                    </div>
+                    <div class="container-flex">
+                        <div class="checkbox-column">
+                            <div class="checkbox-group">
+                            <input type="checkbox" class="checkbox-btn" id="checkbox-4">
+                            <label for="checkbox-4"> </label>
+                            </div>
+                            <div class="form-group form-group--full">
+                            <input type="checkbox" class="checkbox-btn" id="checkbox-5" checked>
+                            <label for="checkbox-5"> </label>
+                            </div>
+                            <div class="form-group form-group--full">
+                            <input type="checkbox" class="checkbox-btn--fill" id="checkbox-6">
+                            <label for="checkbox-6"> </label>
+                            </div>
+                            <div class="form-group form-group--full">
+                            <input type="checkbox" class="checkbox-btn--fill" id="checkbox-7" checked>
+                            <label for="checkbox-7"> </label>
+                            </div>
+                        </div>
+                        <div class="selection-line__box">
+                            <div class="selection-line">
+                                <div class="selection-line-blue__line"></div>
+                                <div class="selection-line-blue__indicator"></div>  
+                            </div>
+                            <div class="loading-bar">
+                                <div class="loading-bar__line"></div>
+                                <div class="loading-bar__indicator">64%</div>
+                                <div class="loading-bar__scale"></div>
+                            </div>
+                            <div class="tooltip-box">
+                                <div class="tooltip tooltip--top">Top Tooltip</div>
+                                <div class="tooltip tooltip--left">Left Tooltip</div>
+                                <div class="tooltip tooltip--right">Right Tooltip</div>
+                                <div class="tooltip tooltip--bottom">Bottom Tooltip</div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
-
             </div>
-            <div class="container container__right">
+    </section>
 
+    <section class= "section section-index-pages">
+        <div class="container container__left">
+            <div class="slider-indicator__block">
+                <div class="slider-indicator__line">
+                    <span class="slider-indicator slider-indicator--active slider-indicator--1">1</span>
+                    <span class="slider-indicator slider-indicator--2">2</span>
+                    <span class="slider-indicator slider-indicator--3">3</span>
+                </div>
+            </div>
+            <div class="slider-indicator__block">
+                <div class="slider-indicator__line-blue">
+                    <span class="slider-indicator slider-indicator--1">1</span>
+                    <span class="slider-indicator slider-indicator--active-blue slider-indicator--2">2</span>
+                    <span class="slider-indicator slider-indicator--3">3</span>
+                </div>
             </div>
         </div>
+        <div class="container container__right">
+        
+        </div>
+
     </section>
 
 </body>
